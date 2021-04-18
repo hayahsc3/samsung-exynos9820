@@ -20,8 +20,8 @@ jobs:
       run: |
         set -e -o pipefail
         ./cruelbuild config                    \
-                     model=${{ matrix.model }} \
-                     name="Cruel-V3.9"         \
+                     model=G973F               \
+                     name="Cruel-V3.10-HYH"    \
                      toolchain=$TOOLCHAIN      \
                      +magisk                   \
                      +nohardening              \
