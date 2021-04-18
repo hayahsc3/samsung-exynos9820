@@ -20,8 +20,8 @@ jobs:
       run: |
         set -e -o pipefail
         ./cruelbuild config                    \
-                     model=G973F               \
-                     name="Cruel-V3.10-HAYAH"    \
+                     model=${{ matrix.model }} \
+                     name="Cruel-V3.10-HAYAH"  \
                      toolchain=$TOOLCHAIN      \
                      +magisk                   \
                      +nohardening              \
@@ -94,5 +94,5 @@ jobs:
         path: config.*
         if-no-files-found: error   
     - name: Download a Build Artifact
-        uses: actions/download-artifact@v2.0.9
+        uses:actions/download-artifact@v2.0.9
 
