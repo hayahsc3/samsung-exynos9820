@@ -92,7 +92,5 @@ jobs:
       with:
         name: ConfigurationInfo-${{ matrix.model }}
         path: config.*
-        if-no-files-found: error   
-    - name: Download a Build Artifact
-        uses:actions/download-artifact@v2.0.9
+        if-no-files-found: error
 
